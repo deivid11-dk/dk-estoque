@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DK Estoque</title>
+
+    <link rel="stylesheet" href="./cCSS/style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        
+        <img src="img/DKestoque.png" alt="" style="width: 205px;">
+        
+
+        <div class="logo">
+           <!-- <h2>DK Estoque</h2>-->
+            <p>Controle de Almoxarifado</p>
+        </div>
+
+        <nav>
+            <a class="active" href="index.html">📊 Dashboard</a>
+            <a href="materiais.html">📦 Materiais</a>
+            <a href="movimentacoes.html">🔄 Movimentações</a>
+        </nav>
+        
+    </aside>
+
+    <main class="content">
+
+        <header>
+            <h1>Dashboard</h1>
+            <span id="dataAtual"></span>
+        </header>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total de Materiais</h3>
+                <h1 id="totalMateriais">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Estoque Baixo</h3>
+                <h1 id="estoqueBaixo">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Movimentações</h3>
+                <h1 id="totalMovimentacoes">0</h1>
+            </div>
+
+            <div class="card">
+                <h3>Total em Estoque</h3>
+                <h1 id="totalQuantidade">0</h1>
+            </div> 
+            
+            <span id="dataAtual"></span>
+            
+
+        </section>
+
+                <section class="table-card">
+           <h2>⚠️ Alertas de Estoque</h2>
+           <div id="alertas"></div>
+
+        </section>
+
+
+        <section class="movimentacoes">
+            <h2>Últimas movimentações</h2>
+
+            <div id="listaMovimentacoes">
+                <p>Nenhuma movimentação cadastrada.</p>
+            </div>
+        </section>
+
+        <section class="table-card">
+            <h2>Materiais por Categoria</h2>
+ 
+          <canvas id="graficoCategorias"></canvas>
+        </section>
+
+        <section class="table-card">
+           <h2>Materiais com Estoque Baixo</h2>
+
+          <canvas id="graficoEstoqueBaixo"></canvas>
+        </section>
+
+        <section class="table-card">
+           <h2>Quantidade por Material</h2>
+
+          <canvas id="graficoMateriais"></canvas>
+        </section>
+
+
+    </main>
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimentações - DK Estoque</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="stylesheet"
+href="https://unpkg.com/lucide-static/font/lucide.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <img src="img/DKestoque.png" alt="" style="width: 205px;">
+        <div class="logo">
+           <!-- <h2>DK Estoque</h2>-->
+            <p>Controle de Movimentações</p>
+        </div>
+        <nav>
+            <a href="index.html">📊 Dashboard</a>
+            <a href="materiais.html">📦 Materiais</a>
+            <a class="active" href="movimentacoes.html">🔄 Movimentações</a>
+        </nav>
+        
+    </aside>
+
+    
+
+<main class="content">
+
+    <h1>Movimentações</h1>
+    
+    
+
+    <div class="form-card">
+
+        <select id="material">
+            <option value="">Selecione um material</option>
+        </select>
+
+        <select id="tipo">
+            <option value="entrada">Entrada</option>
+            <option value="saida">Saída</option>
+        </select>
+
+        <input
+            type="number"
+            id="quantidade"
+            placeholder="Quantidade"
+        >
+
+        <!--<input
+            type="text"
+            id="observacao"
+            placeholder="Observação"
+        > -->
+
+        <button id="btnMovimentar">
+            Registrar
+        </button>
+
+    </div>
+
+    <div class="table-card">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Material</th>
+                    <th>Tipo</th>
+                    <th>Qtd</th>
+                    <!--<th>Obs</th>-->
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody id="listaMov"></tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+<script src="./assets/js/movimentacoes.js"></script>
+
+</body>
+</html>

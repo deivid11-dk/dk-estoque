@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiais - DK Estoque</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <img src="img/DKestoque.png" alt="" style="width: 205px;">
+        <div class="logo">
+           <!-- <h2>DK Estoque</h2>-->
+            <p>Controle de Materiais</p>
+        </div>
+
+        <nav>
+            <a href="index.html">📊 Dashboard</a>
+            <a class="active" href="materiais.html">📦 Materiais</a>
+            <a href="movimentacoes.html">🔄 Movimentações</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+
+        <h1>Materiais</h1>
+
+        <div class="form-card">
+
+            <input type="text" id="nome" placeholder="Nome do material">
+
+            <input type="text" id="categoria" placeholder="Categoria">
+
+            <input type="number" id="quantidade" placeholder="Quantidade">
+
+           <!-- <input type="text" id="unidade" placeholder="Unidade (un, kg, saco...)">-->
+              
+            <input type="number" id="estoqueMinimo" placeholder="Estoque mínimo">
+
+            <button id="btnSalvar">
+                Salvar Material
+            </button>
+
+        </div>
+
+        <input
+            type="text"
+              id="pesquisa"
+                 placeholder="Pesquisar material...">
+
+        <div class="table-card">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Categoria</th>
+                        <th>Qtd</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaMateriais">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <button id="btnExcel">
+          <img src="img/excel.png" alt="logo excel" style="width: 20px; height: auto;"> <h1 class="exceltext">Exportar Excel</h1>
+
+        </button>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="./assets/js/materiais.js"></script>
+
+</body>
+</html>
